@@ -94,6 +94,7 @@
     <Compile Include="appManager\LoginHelper.cs" />
     <Compile Include="appManager\ManagementMenuHelper.cs" />
     <Compile Include="appManager\ProjectManagementHelper.cs" />
+    <Compile Include="tests\RemovedProjectTests.cs" />
     <Compile Include="tests\TEST-Barantcev.cs" />
     <Compile Include="tests\TestBase.cs" />
     <Compile Include="tests\CreateProjectTests.cs" />
