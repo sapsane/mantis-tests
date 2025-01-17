@@ -32,7 +32,9 @@ namespace mantis_tests
             baseURL = "http://localhost/mantisbt-2.26.4/";
             // verificationErrors = new StringBuilder();
             loginHelper = new LoginHelper(this);
-
+            projectManagementHelper = new ProjectManagementHelper(this);
+            managementMenuHelper = new ManagementMenuHelper(this);  
+                       
 
         }
 

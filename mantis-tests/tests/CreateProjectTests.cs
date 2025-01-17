@@ -5,6 +5,7 @@ using System.Threading;
 using mantis_tests;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.DevTools.V128.Page;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
@@ -44,13 +45,13 @@ namespace mantis_tests
         public void CreateProjectTest1()
         {
             app.Auth.Login();
-            Control();
-            ProjectsTab();
-            InitProject();
+            app.ManagementMenuHelper.Control();
+            app.ManagementMenuHelper.ProjectsTab();
+            app.ManagementMenuHelper.InitProject();
 
-            EnterName();
-            AddProject();
-            ExitMantis();
+            app.ProjectManagementHelper.EnterName();
+            app.ProjectManagementHelper.AddProject();   
+            app.ProjectManagementHelper.ExitMantis();
         }
 
       
