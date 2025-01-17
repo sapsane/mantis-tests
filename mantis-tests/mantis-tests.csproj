@@ -91,12 +91,16 @@
   <ItemGroup>
     <Compile Include="appManager\ApplicationManager.cs" />
     <Compile Include="appManager\HelperBase.cs" />
+    <Compile Include="appManager\LoginHelper.cs" />
+    <Compile Include="appManager\ManagementMenuHelper.cs" />
+    <Compile Include="appManager\ProjectManagementHelper.cs" />
     <Compile Include="tests\TEST-Barantcev.cs" />
     <Compile Include="tests\TestBase.cs" />
     <Compile Include="tests\CreateProjectTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -21,15 +21,19 @@ namespace mantis_tests
 
        
         private static ThreadLocal<ApplicationManager> app=new ThreadLocal<ApplicationManager>();
+        protected LoginHelper loginHelper;
+        protected ProjectManagementHelper projectManagementHelper;
+        protected ManagementMenuHelper managementMenuHelper;
+
 
         private ApplicationManager()
         {
             driver = new FirefoxDriver();
             baseURL = "http://localhost/mantisbt-2.26.4/";
-           // verificationErrors = new StringBuilder();
+            // verificationErrors = new StringBuilder();
+            loginHelper = new LoginHelper(this);
 
 
-           
         }
 
         ~ApplicationManager() 
@@ -64,16 +68,34 @@ namespace mantis_tests
             }
           
         }
+        public LoginHelper Auth
+        {
+            get
+            {
+                return loginHelper;
+            }
+        }
+
+        public ProjectManagementHelper ProjectManagementHelper
+        {
+            get
+            {
+                return projectManagementHelper;
+            }
+        }
+        public ManagementMenuHelper ManagementMenuHelper
+        {
+            get
+            {
+                return managementMenuHelper;
+            }
+        }
 
 
 
-       
-     
 
 
-     
 
-      
 
         public void Stop() 
         {
