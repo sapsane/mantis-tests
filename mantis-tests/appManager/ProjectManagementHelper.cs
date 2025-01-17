@@ -15,11 +15,11 @@ namespace mantis_tests
 
         }
 
-        public void EnterName()
+        public void EnterName(string name)
         {
             driver.FindElement(By.Id("project-name")).Click();
             driver.FindElement(By.Id("project-name")).Clear();
-            driver.FindElement(By.Id("project-name")).SendKeys("test20");
+            driver.FindElement(By.Id("project-name")).SendKeys(name);
         }
 
 

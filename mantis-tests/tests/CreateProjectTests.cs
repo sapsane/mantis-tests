@@ -49,7 +49,7 @@ namespace mantis_tests
             app.ManagementMenuHelper.ProjectsTab();
             app.ManagementMenuHelper.InitProject();
 
-            app.ProjectManagementHelper.EnterName();
+            app.ProjectManagementHelper.EnterName(GenerateRandomString(5));
             app.ProjectManagementHelper.AddProject();   
             app.ProjectManagementHelper.ExitMantis();
         }
