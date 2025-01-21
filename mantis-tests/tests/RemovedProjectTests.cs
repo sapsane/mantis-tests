@@ -16,11 +16,21 @@ namespace mantis_tests
             app.Auth.Login();
             app.ManagementMenuHelper.Control();
             app.ManagementMenuHelper.ProjectsTab();
+            List<ProjectData> oldProjectList = app.ProjectManagementHelper.GetProjectList();
             
+            ProjectData ToBeRemoved = oldProjectList[0];
 
             app.ProjectManagementHelper.SelectProject();
             app.ProjectManagementHelper.DeleteProject();
             app.ProjectManagementHelper.CommitDeleteProject();
+
+            List<ProjectData> newProjectList = app.ProjectManagementHelper.GetProjectList();
+
+            oldProjectList.Remove(ToBeRemoved);
+
+            oldProjectList.Sort();
+            newProjectList.Sort();
+            Assert.AreEqual(oldProjectList, newProjectList);
 
             app.ProjectManagementHelper.ExitMantis();
         }
