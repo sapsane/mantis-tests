@@ -14,8 +14,7 @@ namespace mantis_tests
         public void RemovedProjectTest1() 
         {
             app.Auth.Login();
-            app.ManagementMenuHelper.Control();
-            app.ManagementMenuHelper.ProjectsTab();
+
 
 
             AccountData account = new AccountData()
