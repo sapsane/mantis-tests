@@ -25,6 +25,10 @@ namespace mantis_tests
         protected ProjectManagementHelper projectManagementHelper;
         protected ManagementMenuHelper managementMenuHelper;
 
+       
+
+        
+
 
         private ApplicationManager()
         {
@@ -33,8 +37,8 @@ namespace mantis_tests
             // verificationErrors = new StringBuilder();
             loginHelper = new LoginHelper(this);
             projectManagementHelper = new ProjectManagementHelper(this);
-            managementMenuHelper = new ManagementMenuHelper(this);  
-                       
+            managementMenuHelper = new ManagementMenuHelper(this);
+            API = new ApiHelper(this);
 
         }
 
@@ -94,6 +98,7 @@ namespace mantis_tests
         }
 
 
+        public ApiHelper API { get; set; }
 
 
 

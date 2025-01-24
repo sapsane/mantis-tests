@@ -49,7 +49,17 @@ namespace mantis_tests
             app.ManagementMenuHelper.Control();
             app.ManagementMenuHelper.ProjectsTab();
 
-            List<ProjectData> oldProjectList = app.ProjectManagementHelper.GetProjectList();
+
+            AccountData account = new AccountData()
+            {
+                AccountName = "Administrator",
+                Password = "root"
+            };
+
+            List<ProjectData> oldProjectList = app.API.ListApiProjetData(account);
+
+
+            //List<ProjectData> oldProjectList = app.ProjectManagementHelper.GetProjectList();
             app.ManagementMenuHelper.InitProject();
 
             string projectName= GenerateRandomString(5);
@@ -58,7 +68,9 @@ namespace mantis_tests
 
             app.ProjectManagementHelper.EnterName(projectName);
             app.ProjectManagementHelper.AddProject();
-            List<ProjectData> newProjectList = app.ProjectManagementHelper.GetProjectList();
+
+            List<ProjectData> newProjectList= app.API.ListApiProjetData(account);
+            //List<ProjectData> newProjectList = app.ProjectManagementHelper.GetProjectList();
 
             oldProjectList.Add(project1);
 
