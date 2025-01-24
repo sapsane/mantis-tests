@@ -21,7 +21,7 @@ namespace mantis_tests
                 Password ="root"
             };
 
-            app.API.ListApiProjetData(account);
+            List<ProjectData>  test = app.API.ListApiProjetData(account);
 
         }
 

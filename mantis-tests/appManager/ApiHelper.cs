@@ -37,8 +37,7 @@ namespace mantis_tests
         public void CreateApiProjet(AccountData account)
         {
             Mantis.MantisConnectPortTypeClient client = new Mantis.MantisConnectPortTypeClient();
-            //ProjectData project1 =new ProjectData("Test99");
-            
+                        
             Mantis.ProjectData project3 = new Mantis.ProjectData
             { name = "Test99" };
 
